@@ -1,0 +1,10 @@
+.maincontainer{ width: 900px;
+    height: auto;
+    min-height: 900px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    background-color: #ddd;}
+
+.scroll{
+    width: 19%;
+}

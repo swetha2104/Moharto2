@@ -1,0 +1,203 @@
+.maincontainer{ width: 980px;
+    height: auto;
+    min-height: 900px;
+    border: 1px solid white;
+    margin: 0 auto;
+    background-color: white;}
+.title{
+   
+    height: 57px;
+    width: 100%;
+    background-color: royalblue;
+    margin: 0 0 4px 0; float: left;
+    
+}
+ div  ul li{
+    float:left;
+    display:inline;
+    margin-left:29px;
+     color: white;
+}
+.content{
+   float: right;
+margin-top: -118px;
+margin-left: 222px;
+margin-right: 222px;
+}
+.col{
+    margin-left: 10px;
+}
+.image{
+ margin-top: -117px;
+margin-left: 784px;
+}
+.company{
+      border: 1px solid black;
+float: left;
+margin: 56px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.first{
+   border: 1px solid white;
+float: left;
+margin: 1px 23px -43px -16px;
+background: white;
+height: 100px;
+width: 760px;
+}
+.company1{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company2{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company3{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company4{
+      border: 1px solid white;
+float: left;
+margin: 4px -6px -43px -7px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.Second{
+   border: 1px solid white;
+float: left;
+margin: 37px 23px -43px -16px;
+background: white;
+height: 100px;
+width: 760px;
+}
+.company5{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company6{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company7{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company8{
+      border: 1px solid white;
+float: left;
+margin: 4px -6px -43px -7px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.third{
+     border: 1px solid white;
+float: left;
+margin: 37px 23px -43px -16px;
+background: white;
+height: 100px;
+width: 760px;
+}
+.company9{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company10{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company11{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company12{
+      border: 1px solid white;
+float: left;
+margin: 4px -6px -43px -7px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.forth{
+    border: 1px solid white;
+float: left;
+margin: 37px 23px -43px -16px;
+background: white;
+height: 100px;
+width: 760px; 
+}
+.company13{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company14{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company15{
+      border: 1px solid white;
+float: left;
+margin: 3px 15px -43px 2px;
+background: white;
+height: 89px;
+width: 175px;
+}
+.company16{
+    border: 1px solid white;
+float: left;
+margin: 4px -6px -43px -7px;
+background: white;
+height: 89px;
+width: 175px;
+}
+
+

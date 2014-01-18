@@ -1,0 +1,158 @@
+.maincontainer{ width: 980px;
+    height: auto;
+    min-height: 1125px;
+    border: 1px solid white;
+    margin: 0 auto;
+    background-color: white;}
+.title{
+   
+    height: 57px;
+    width: 100%;
+    background-color: royalblue;
+    margin: 0 0 4px 0; float: left;
+    
+}
+div  ul li{
+    float:left;
+    display:inline;
+    margin-left:29px;
+     color: white;
+}
+.image1 img{
+    
+}
+.content1{
+/*    margin: 81px 42px 34px 38px;*/
+     border: 1px solid white;
+     height:355px;
+}
+.box1{
+   border: 1px solid white;
+height: 324px;
+margin-left: -2px;
+width: 70%;
+float: left;
+padding-top: 6px;
+/*margin-right: 298px;
+
+margin-top: 7px;
+     */
+}
+.content2{
+/*    margin: 81px 42px 34px 38px;*/
+    border: 1px solid lightgray;
+margin: 67px 24px -49px 700px;
+height: 75%;
+width: 272px;
+     
+}
+
+.ui-galleria-thumb-nav-left,
+.ui-galleria-thumb-nav-right{
+   display:block !important;
+}
+
+#btn_right
+{
+    z-index: 999;
+right: 0;
+float: right;
+margin-top: -28%;
+position: absolute;
+}
+
+#btn_left{
+    z-index: 999;
+left: 0;
+margin-top: -28%;
+position: absolute;
+}
+.content3{
+   
+border: 1px solid lightgray;
+float: left;
+margin: -38px 0px -49px -1px;
+background: aliceblue;
+height: 270px;
+width: 672px;
+     
+}
+.content4{
+   border: 1px solid lightgray;
+float: right;
+
+   margin: -40px 0px -49px -1px;
+   background: #ffffff;
+
+   height: 366px;
+
+   width: 275px; 
+}
+.txt{
+    width: 84%; 
+    margin-top: 9px;
+    height: 16px;
+}
+.content5{
+    border: 1px solid lightgray;
+float: left;
+
+    margin: 61px 0px -49px -1px;
+background: aliceblue;
+
+    height: 262px;
+width: 674px;
+}
+.content6{
+  border: 1px solid lightgray;
+float: left;
+
+  margin: -122px 0px -43px 705px;
+
+  background: white;
+
+  height: 169px;
+
+  width: 275px;  
+}
+.content7{
+   border: 1px solid white;
+
+   float: left;
+
+  
+   margin: 59px 0px -43px -1px;
+
+  background: white;
+
+  
+   height: 189px;
+
+  
+   width: 677px;   
+}
+.content8{
+    border: 1px solid lightgray;
+float: left;
+
+  
+    margin: -146px 0px -43px 705px;
+
+  background: white;
+
+  
+    height: 186px;
+
+  width: 275px;  
+}
+
+.drpdwn{
+    font-size: 10px;
+    text-align: left;
+}
+.txt1{
+    width: 84%; height: 16px;
+}
+#drop1{
+    font-size: 10px;
+}

@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/simple3.css" />
+         <style>
+           .select{
+            width: 100px;
+            } 
+            .reportsAnalysisDropdown{
+                width: 138px!important;
+            }
+            input::-webkit-input-placeholder {
+         font-size: 12px;
+         padding-top: 5px;
+         color: #0099ff;
+       }
+        </style>
+    </h:head>
+
+    <h:body style="margin: 0 auto;padding: 0;">
+        <h:form>
+            <div  class="maincontainer">
+                <div class="title">
+                    <ul>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Course Offered</li>
+                        <li>Facilites</li>
+                        <li>Track Record</li>
+                        <li>Benifits</li>
+                        <li>Student loan</li>
+                        <li>FAQ</li>
+                        <li>Contact Us</li>
+
+                    </ul>
+                </div>
+                <div class="content1">
+                    <div class="box1">
+<!--                        <h:graphicImage value="images/col3.png" width="600" height="250"/> -->
+<p:imageSwitch effect="wipe" widgetVar="switcher" slideshowAuto="false" >  
+                    <ui:repeat value="#{imageSwitchBean.images}" var="image"> 
+
+                        <div>
+                            <p:graphicImage value="/images/#{image}" width="670" height="270" style="z-index: 1;">
+
+                            </p:graphicImage> 
+
+                            <div id="btn_left">
+                                <p:commandButton styleClass="button" id="b1"     type="button" onclick="PF('switcher').previous();"  
+                                                 icon="ui-icon-circle-triangle-w"/>
+                            </div>
+                            <div id="btn_right">
+                                <p:commandButton id="b2" type="button" onclick="PF('switcher').next();"  
+                                                 icon="ui-icon-circle-triangle-e"/>  
+                            </div>
+
+                        </div>
+                    </ui:repeat>  
+
+                </p:imageSwitch>  
+                    </div>
+                    <div class="content2">
+                        <!--                       <p:media value="http://www.youtube.com/watch?v=Ut83V-P5AAk" width="420" height="315" player="flash"/>  -->
+                        <p:media value="http://www.youtube.com/v/kKARNadxshU" width="220" height="200"  player="flash" style="padding-top: 11px;
+padding-left: 29px;"/>
+                        <center>
+                            <h:outputText value="ABOUT BRINDAVAN COLLEGE" style="color: lightseagreen;" />
+                     </center>
+                    </div>
+                </div>
+                <!--                <p:commandButton type="button" onclick="PF('switcher').previous();"  
+                                icon="ui-icon-circle-triangle-w"/>  
+                <p:commandButton type="button" onclick="PF('switcher').next();"  
+                                icon="ui-icon-circle-triangle-e"/>  -->
+
+<!--                <p:imageSwitch effect="wipe" widgetVar="switcher" slideshowAuto="false" >  
+                    <ui:repeat value="#{imageSwitchBean.images}" var="image"> 
+
+                        <div>
+                            <p:graphicImage value="/images/#{image}" width="600" height="250" style="z-index: 1;">
+
+                            </p:graphicImage> 
+
+                            <div id="btn_left">
+                                <p:commandButton styleClass="button" id="b1"  onmouseout="this.className='button'" onmouseover="this.className='out'"   type="button" onclick="PF('switcher').previous();"  
+                                                 icon="ui-icon-circle-triangle-w"/>
+                            </div>
+                            <div id="btn_right">
+                                <p:commandButton id="b2" type="button" onclick="PF('switcher').next();"  
+                                                 icon="ui-icon-circle-triangle-e"/>  
+                            </div>
+
+                        </div>
+                    </ui:repeat>  
+
+                </p:imageSwitch>  -->
+<!--            <input type="button" id="button1" value="Button" onmouseover="document.forms[0].button1.id='button2'" onmouseout="document.forms[0].button1.id='button1'"/></br></br>
+            <input type="button" id="button2" value="Button" onmouseover="document.forms[0].button2.id='button1'" onmouseout="document.forms[0].button2.id='button2'"/></br></br>-->
+<div style="clear: both;"></div>
+<div class="content3">
+    <h:outputText value="Welcome to Brindavan College" style="font-size: 18px; font-weight: bold; color: lightseagreen;float: left;
+margin-left: 16px;padding-top: 6px;"/><br/>
+    <p align="justify" style="float: left;margin-left: 17px;padding-right: 18px;">
+        The Brindavan College was established in 1993. it had a humble beginning with 127 students in B.A., B.Sc and B.Com courses. Currently it has over 1400 
+        students from 50 overseas countries.
+    </p>
+    <p align="justify" style="float: left;margin-left: 17px;padding-right: 18px;">
+        The college is recognized by Government, approved by All India Council for
+        Technical Education(AICTE), New Delhi which is the statutiry body to approve 
+        professional courses and affliated to Bengaluru University, the biggest in Asia
+        having "five star" accreditation by NAAC. (National Accrediation and Assessment Council), instituted by Government and UGC.
+    </p>
+    <h:commandLink value="Read more" style="color: brown;float: right;margin-right: 10px; margin-top: -15px;"/>
+   
+            </div>
+ <h:form id="form">
+<div class="content4">
+   
+    <center>
+        <h:outputText value="Student Enquiry Form" style="font-weight:  bold;font-size: 19px;"/><br/><br/>
+        <p:inputText id="name" value="#{bean1.name}" style="width: 84%; height: 16px;" required="true">
+            <f:validateLength  minimum="3"/>
+            <p:watermark for="name" value="Name"/>
+        </p:inputText>
+      
+        <br/>
+         <p:inputText id="sex" style="width: 84%;margin-top: 7px;height: 16px;">
+            <p:watermark for="sex" value="Last Name"/>
+        </p:inputText><br/>
+        <p:inputText id="mobile" style="width: 84%;margin-top: 7px;height: 16px;">
+            <p:watermark for="mobile" value="Mobile"/>
+        </p:inputText>
+         <p:inputText id="email" style="width: 84%;margin-top: 7px;height: 16px;">
+            <p:watermark for="email" value="Email"/>
+        </p:inputText>
+        <p:selectOneMenu  style="width: 238px; margin-top: 7px;height: 26px;font-size: 14px;text-align: left;"  >  
+            <f:selectItem itemLabel="Qualification" itemValue="" id="drop1" />  
+            </p:selectOneMenu>
+         <p:selectOneMenu  style="width: 238px; margin-top: 7px;height: 26px;font-size: 14px;text-align: left;"  >  
+            <f:selectItem itemLabel="Courses" itemValue=""  />  
+
+            </p:selectOneMenu>
+         <p:inputTextarea id="tx"  style="width: 82%;margin-top: 7px;height: 52px;font-size: 14px;text-align: left; text-emphasis-color: #0099ff;">
+             <p:watermark for="tx" value="post a query"/>
+            </p:inputTextarea><br/>
+    </center>
+        <p:commandButton id="btn" value="Submit" update="@form" actionListener="#{bean1.savePerson(actionEvent)}" style="height: 30px;width: 95px;float: right;margin-right: 18px;"/>
+     <p:commandButton value="Reset" style="height: 30px;width: 95px;float: right;"/>
+  
+</div>
+        </h:form>
+<div class="content5">
+    <h:graphicImage value="images/img1.png" style="float: left;margin-left: 14px;margin-top: 12px;"/>
+    <p align="justify" style="">
+      "Congratulation to the young aspirants, who have a desire
+      to become engineers For career-minded, professionals,
+      bengaluru is a major centre of Information technology,
+      Biological Science etc.
+    </p>
+    <p align="justify">
+        Regarding Brindavan College's accreditation, the degree 
+        programs we offer, student services beyond classroom
+        instruction, faculty and staff who make up the college
+        community."
+    </p>
+<!--    <h:outputText value="Dr.Majed A.A Sabha B.E" style="float:left; margin-left: 0px;"/>-->
+<h6 style="float: left;margin-left: -139px;font-size: 13px;margin-top: 20px;">Dr.Majed A.A Sabha B.E </h6>
+<h6 style="float: left;margin-left: -139px;font-size: 13px;margin-top: 38px;">M.B.A Ph.D Chairman </h6><br/>
+ <h:commandLink value="Read more" style="color: brown;float: right;margin-right: 10px; margin-top: 33px;"/>
+</div>
+<div class="content6">
+    <center>
+        <h:outputText value="Memorable Events" style="font-size: 19px;font-weight: bold;"/>
+   </center>
+    <h:graphicImage value="images/img2.png" style="float: left;margin-left: 13px;margin-top: 8px;"/>
+     <h:graphicImage value="images/img3.png" style="float: left;margin-left: 8px;margin-top: 8px;"/>
+     <h:graphicImage value="images/img4.png" style="float: left;margin-left: 8px;margin-top: 8px;"/>
+      <h:graphicImage value="images/img5.png" style="float: left;margin-left: -250px;margin-top: 66px;"/>
+     
+      <h:graphicImage value="images/img6.png" style="float: left;margin-left: -163px;margin-top: 66px;"/>
+      <h:graphicImage value="images/img7.png" style="float: left;margin-left: -78px;margin-top: 66px;"/><br/>
+      <h:commandLink value="View more" style="color: brown;float: right;margin-right: 10px;"/>
+</div>
+<div class="content7">
+ <h:graphicImage value="images/img8.png" width="200" style="float: left;margin-left: -1px;margin-top: -1px;"/> 
+ <h:graphicImage value="images/img9.png" width="210" style="float: left;margin-left: 27px;margin-top: -1px;"/> 
+ <h:graphicImage value="images/img10.png" width="200" style="float: left;margin-left: 38px;margin-top: -1px;"/> 
+</div>
+<div class="content8">
+    <center>
+        <h:outputText value="Testimonials" style="font-size: 19px;font-weight: bold;"/>
+   </center>
+     <h:graphicImage value="images/img11.png" width="50" style="float: left;margin-left: 25px;margin-top: 8px;"/>
+      <h:graphicImage value="images/img12.png" width="50" style="float: left;margin-left: 8px;margin-top: 8px;"/>
+        <h:graphicImage value="images/img13.png" width="50" style="float: left;margin-left: 8px;margin-top: 8px;"/>
+          <h:graphicImage value="images/img14.png" width="50" style="float: left;margin-left: 8px;margin-top: 8px;"/><br/>
+          <p:separator style="width: 85%; margin-top: 56;"/>
+          <center>
+              <h:outputText value="As a student, I am really happy with this
+                            college I learnt many more things from my
+                            college not only in my work part even 
+                            extra curricular activities." style="color: brown;font-style: italic;font-size: 12px;"/><br/>
+              <h:outputText value="-Nitesh -MBA" style="color: brown;font-style: italic;"/>
+          </center>
+</div>
+            </div>
+            
+        </h:form>
+    </h:body>
+</html>
+

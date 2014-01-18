@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+         <link rel="stylesheet" href="resources/simple5.css" />
+          <style>
+            
+           
+            input::-webkit-input-placeholder {
+         font-size: 12px;
+         padding-top: 5px;
+         color: #0099ff;
+            }
+         .ui-datatable .ui-column-filter {
+display: none;
+width: 100px;
+margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+-webkit-appearance: none;
+width: 8px;
+background-color: transparent;
+}
+   
+
+</style>
+         
+        
+    </h:head>
+    <h:body style="margin: 0 auto;padding: 0;">
+        <h:form>
+            <div  class="maincontainer">
+                <div class="content1">
+                    <div class="dt1">
+                         <p:dataTable id="dataTable" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable1"   
+                        emptyMessage="No Data found" style=" font-size: 12px;width: 100%; " scrollable="true" scrollHeight="80" >
+                <f:facet name="header">  
+            <p:outputPanel>  
+                <h:outputText value="Specialization" />  <br/>
+                <p:inputText id="globalFilter" onkeyup="carsTable1.filter()" style="font-size: 12px;" />  
+            </p:outputPanel>  
+                    
+        </f:facet> 
+               
+                             <p:column id="colorColumn" filterBy="#{car.id}" > 
+                           <h:selectBooleanCheckbox id="sbc" label=""/>
+                           <h:outputText value="#{car.id}" style="font-size: 10px;" />
+                    
+                </p:column>
+              
+                
+            </p:dataTable>
+                    </div>
+                    <div class="dt2">
+                         <p:dataTable id="dataTable1" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable2"   
+                        emptyMessage="No Data found" style=" font-size: 12px;
+width: 100%; " scrollable="true" scrollHeight="80" >
+                <f:facet name="header">  
+            <p:outputPanel>  
+                <h:outputText value="College" />  <br/>
+                <p:inputText id="globalFilter" onkeyup="carsTable2.filter()" style="font-size: 12px;" />  
+            </p:outputPanel>  
+                    
+        </f:facet> 
+               
+                             <p:column id="colorColumn" filterBy="#{car.name}"  > 
+                           <h:selectBooleanCheckbox id="sbc1" label=""/>
+                           <h:outputText value="#{car.name}" style="font-size: 10px;" />
+                    
+                </p:column>
+                         </p:dataTable>
+                    </div>
+                    <div class="dt3">
+                        <h3>Fee Range </h3>  
+    <h:panelGrid columns="1" style="margin-bottom:10px">                      
+        <h:outputText id="displayRange" value="Between #{sliderBean.number6} and #{sliderBean.number7}"/>                      
+        <p:slider for="txt6,txt7" display="displayRange" style="width:142px" range="true"   
+                  displayTemplate="Between {min} and {max}" minValue="100000" maxValue="700000"/>  
+    </h:panelGrid>  
+                         <h:inputHidden id="txt6" value="#{sliderBean.number6}" />  
+    <h:inputHidden id="txt7" value="#{sliderBean.number7}" />  
+                    </div>
+                    <div class="dt4">
+                         <p:dataTable id="dataTable2" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable3"   
+                        emptyMessage="No Data found" style=" font-size: 12px;
+width: 100%; " scrollable="true" scrollHeight="80" >
+                <f:facet name="header">  
+            <p:outputPanel>  
+                <h:outputText value="Type" />  <br/>
+                <p:inputText id="globalFilter" onkeyup="carsTable3.filter()" style="font-size: 12px;" />  
+            </p:outputPanel>  
+                    
+        </f:facet> 
+               
+                             <p:column id="colorColumn" filterBy="#{car.type}"  > 
+                           <h:selectBooleanCheckbox id="sbc2" label=""/>
+                           <h:outputText value="#{car.type}" style="font-size: 10px;" />
+                    
+                </p:column>
+                         </p:dataTable>
+                    </div>
+                    <div class="dt5">
+                        <div class="seat5">
+                            <h:outputText value="Duration" style=" font-size: 14px; font-weight: bold;"/>
+                        </div>      
+                        <div class="seat6">
+                         <h:selectBooleanCheckbox id="sbc2" label=""/> 2 Years<br/>
+                           <h:selectBooleanCheckbox id="sbc2" label=""/> 3 Years<br/>
+                           </div>
+                    </div>
+                    <div class="seat7">
+                        <p:graphicImage value="images/add1.png" width="146" height="108"/>
+                    </div>
+                </div>
+<!--                <div class="college_content">
+                    
+                    <p:dataGrid var="c" value="#{collegeBean.college}" columns="1" rows="2" paginator="true" paginatorPosition="bottom">  
+
+                        <h:panelGrid columns="4" style="font-size: 12px;border: 1px solid buttonhighlight;">
+                            <h:graphicImage  value="images/#{c.collegelogo}" height="100" width="100" />
+                            <h:panelGrid columns="1" width="330px;">
+                                <h:outputText value="#{c.collegename}" />
+                                <h:outputText value="#{c.affiliated}" />
+                                <h:outputText value="* Fees:INR #{c.fee}" />
+                                <h:outputText value="*#{c.placement}" />
+                                <h:outputText value="*#{c.p1}" />
+                                <h:outputText value="#{c.p2}" />
+                                <h:outputText value="*#{c.p3}" />
+                            </h:panelGrid>
+             
+                            <h:outputText value="#{c.seats}" />
+
+                            <h:panelGrid columns="1" >
+                                      <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                                      <p:commandButton value="view college" style="margin-top: 7px;"/>
+                            </h:panelGrid>
+                        </h:panelGrid>
+                    </p:dataGrid>
+                </div>-->
+                
+                
+                <div class="content2">
+                    <h:outputText value="College Details" style="padding-left: 151px;"/>
+                    
+                      <h:outputText value="Seats Available" style="padding-left: 151px;"/>
+                       <h:outputText value="Actions" style="padding-left: 45px;"/>
+                      
+                </div>
+                <div class="content3">
+                    <div class="content7">
+                    <p:graphicImage value="images/Brindavan.png"/>
+                    </div>
+                     <div class="content8">
+                    <p:graphicImage value="images/GCC.png"/>
+                    </div>
+                     <div class="img1">
+                    <p:graphicImage value="images/Aims.png"/>
+                    </div>
+                    <div class="img2">
+                    <p:graphicImage value="images/Presidency.png"/>
+                    </div>
+                     <div class="img3">
+                    <p:graphicImage value="images/Amity.png"/>
+                    </div>
+                </div>
+                <div class="content4">
+                    <div class="content9">
+                        <h:outputText value="BRINDAVAN COLLEGE OF ENGINEERING"/><br/>
+                        <h:outputText value="(VTU Banaglore, Full time)" style="font-size: 12px;"/><br/>
+                        <h:outputText value="* Fees:INR 4,75,000"/><br/>
+                        <h:outputText value="* 100% placements"/><br/>
+                          <h:outputText value="* The biggest in Asia having five star accrediation   by NAAC "/><br/>
+                          <h:outputText value=" by NAAC " style="padding-right:10px"/><br/>
+                             <h:outputText value="* It has over 1400 students from 46 overseas countires " />
+                    </div>
+                    <div class="content10">
+                        <h:outputText value="GARDEN CITY COLLEGE"/><br/>
+                          <h:outputText value="(Banglore university, Full time)" style="font-size: 12px;"/><br/>
+                          <h:outputText value="* Fees:INR 5,00,000"/><br/>
+                          <h:outputText value="*Assured Placements"/><br/>
+                           <h:outputText value="*Accrediation by NAAC with 'A' Grade"/><br/>
+                           <h:outputText value="*Trusted by students from 73 countries"/><br/>
+                           <h:outputText value="*In-house language and dance academy"/><br/>
+                          
+                    </div>
+                    <div class="details">
+                           <h:outputText value="AIMS, Banglore"/><br/>
+                            <h:outputText value="(Banglore university, Full time)" style="font-size: 12px;"/><br/>
+                             <h:outputText value="* Fees:INR 8,10,000"/><br/>
+                              <h:outputText value="*Free laptop"/><br/>
+                               <h:outputText value="*100% placements"/><br/>
+                                  <h:outputText value="*Foriegn Exchange "/><br/>
+                           
+                    </div>
+                    <div class="details1">
+                         <h:outputText value="PRECIDENCY COLLEGE"/><br/>
+                           <h:outputText value="(Banglore university, Full time)" style="font-size: 12px;"/><br/>
+                             <h:outputText value="* Fees:INR 8,10,000"/><br/>
+                              <h:outputText value="*Free laptop"/><br/>
+                                <h:outputText value="*100% placements"/><br/>
+                                  <h:outputText value="*Free soft skills trainig"/><br/>
+                                  <h:outputText value="*WiFi campus"/><br/>
+                    </div>
+                    <div class="details2">
+                         <h:outputText value="AMITY GLOBAL BUSSINESS SCHOOl"/><br/>
+                           <h:outputText value="(Banglore university, Full time)" style="font-size: 12px;"/><br/>
+                             <h:outputText value="* Fees:INR 8,10,000"/><br/>
+                              <h:outputText value="*Free laptop"/><br/>
+                                <h:outputText value="*100% placements"/><br/>
+                                  <h:outputText value="*Free soft skills trainig"/><br/>
+                                  <h:outputText value="*WiFi campus"/><br/>
+                    </div>
+                </div>
+                <div class="content5">
+                    <div class="content51">
+                        <h:outputText value="25"/>
+                    </div>
+                    <div class="seat1">
+                        <h:outputText value="22"/>
+                    </div>
+                    <div class="seat2">
+                        <h:outputText value="15"/>
+                    </div>
+                    <div class="seat3">
+                        <h:outputText value="5"/>
+                    </div>
+                     <div class="seat4">
+                        <h:outputText value="10"/>
+                    </div>
+                </div>
+                <div class="content6">
+                    <div class="content61">
+                        <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                        <p:commandButton value="view college" style="margin-top: 7px;"/>
+                    </div>
+                     <div class="btn1">
+                        <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                        <p:commandButton value="view college" style="margin-top: 7px;"/>
+                    </div>
+                     <div class="btn2">
+                        <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                        <p:commandButton value="view college" style="margin-top: 7px;"/>
+                    </div>
+                    <div class="btn3">
+                        <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                        <p:commandButton value="view college" style="margin-top: 7px;"/>
+                    </div>
+                    <div class="btn4">
+                        <p:commandButton value="Enroll now" style="width: 97%;margin-left: 1px;"/>
+                        <p:commandButton value="view college" style="margin-top: 7px;"/>
+                    </div>
+                </div>
+                <div class="right">
+            
+                <div class="tab">
+                    <center>
+                    <h:outputText value="I WANT TO DO" style="font-size: 11px;font-weight: bold;"/>
+                    </center>
+                    <p:tabView  id= "tabview"  styleClass="tabView1" effect="slide" dynamic="true" style="font-size: 11px; border: none; color: white; " >
+                        <p:tab title="PG" id="pg" > 
+                              <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> <br/><br/> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 132px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                     <p:graphicImage value="images/question.png"/>
+                     <div class="img4"> 
+                         <p:commandButton value="Go" style="width: 36px;height: 21px;"/>   
+                     </div>
+                     <h:outputText value=" Seats Available:25 " style="font-size: 10px; color: red; "/>
+                    
+                         </p:tab>
+                        <p:tab title="UG" id="ug"> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> <br/><br/> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 132px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                         </p:tab>
+                        <p:tab title="After 10th" id="ten"> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> <br/><br/> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 132px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                         </p:tab>
+                    </p:tabView>
+                </div>
+                <div class="tab1">
+                    <p:panel header="Quick Links"  styleClass="panel" style="border: none;" > 
+                      
+                    <ul>
+                        <li style="padding-top: 0px"><h:commandLink value="MBA in Banglore" style="text-decoration: none; padding-top:0px;"/></li>
+                        <li ><h:commandLink value="Animation in Diploma" style="text-decoration: none;"/></li> 
+                        <li ><h:commandLink value="Scholorships" style="text-decoration: none;"/></li> 
+                        <li ><h:commandLink value="MBBS in Mysore" style="text-decoration: none;"/></li> 
+                        <li ><h:commandLink value="Ask a question" style="text-decoration: none;"/></li> 
+                     
+                    </ul>
+                          
+                    </p:panel>
+                </div>
+                <div class="add1">
+                    <p:graphicImage value="images/add.png" width="185" height="361"/>
+                </div>
+                </div>
+                </div>
+          
+           
+        </h:form>
+    </h:body>
+</html>
+
